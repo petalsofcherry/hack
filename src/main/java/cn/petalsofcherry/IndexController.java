@@ -1,0 +1,15 @@
+package cn.petalsofcherry;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * Created by luojingyu on 17-7-3.
+ */
+@RestController
+public class IndexController {
+    @GetMapping(value="/")
+    public String index() {
+        return "Hello World";
+    }
+}
