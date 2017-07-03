@@ -15,7 +15,7 @@ public class ResultUtils {
         return new Result(0, "成功");
     }
 
-    public static Result error() {
-        return new Result(1, "失败");
+    public static Result error(String msg) {
+        return new Result(1, msg);
     }
 }
