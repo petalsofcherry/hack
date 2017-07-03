@@ -1,0 +1,6 @@
+sever:
+  port: 8082
+
+tianguohua:
+  weight: 160
+  clothes: 4

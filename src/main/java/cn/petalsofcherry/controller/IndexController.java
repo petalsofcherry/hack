@@ -1,5 +1,6 @@
-package cn.petalsofcherry;
+package cn.petalsofcherry.controller;
 
+import cn.petalsofcherry.domain.Result;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IndexController {
     @GetMapping(value="/")
-    public String index() {
-        return "Hello World";
+    public Result index() {
+        return new Result(0, "index");
     }
 }
