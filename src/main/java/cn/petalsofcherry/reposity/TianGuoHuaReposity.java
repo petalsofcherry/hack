@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface TianGuoHuaReposity extends JpaRepository<TianGuoHua, Integer> {
     public List<TianGuoHua> findByWeight(Double weight);
-    public TianGuoHua findOneByWeight(Double weight);
+    public TianGuoHua findFirstByWeight(Double weight);
 }

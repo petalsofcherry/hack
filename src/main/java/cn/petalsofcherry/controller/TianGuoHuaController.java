@@ -30,10 +30,10 @@ public class TianGuoHuaController {
 
     @GetMapping(value = "/tianguohua/{weight}")
     public TianGuoHua tianGuoHuaFindOne(@PathVariable("weight") Double weight) {
-        return tianGuoHuaReposity.findOneByWeight(weight);
+        return tianGuoHuaReposity.findFirstByWeight(weight);
     }
 
-    @PostMapping(value = "tianguohua")
+    @PostMapping(value = "/tianguohua")
     public Result<TianGuoHua> tianguohuaAdd(@Valid TianGuoHua tianguohua, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return ResultUtils.error(bindingResult.getFieldError().getDefaultMessage());
